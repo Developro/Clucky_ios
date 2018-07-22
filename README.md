@@ -1,4 +1,4 @@
-# clucky
+# Clucky
 
 **iOS** приложение для _практики_ проводимой **GeekBrains** 
 
