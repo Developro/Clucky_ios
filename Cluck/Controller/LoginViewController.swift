@@ -3,7 +3,7 @@ import Magic
 
 class LoginViewController: UIViewController {
   
-  //Outlets
+    let buttonsBehavior = ButtonsBehavior()
   
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navBarBackground.png"), for: .default)
         
-        navigationItem.rightBarButtonItem = NavigationButton.createNavigationButtonOf(type: .menuButton, with: #selector(menuPressed), on: self)
+        navigationItem.rightBarButtonItem = NavigationButton.createNavigationButtonOf(type: .menuButton, with: #selector(buttonsBehavior.menuPressed), on: self)
         
         nameTextField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
@@ -29,12 +29,6 @@ class LoginViewController: UIViewController {
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
-    }
-    
-    @objc func menuPressed() {
-        //убрать в другой класс
-        //пока заглушка
-        NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
     
     // MARK: Functions
@@ -53,24 +47,13 @@ class LoginViewController: UIViewController {
         // Обозначение контролёра, к которому будет совершён переход по окончании автоизационного замыкания
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "QuestionListTableViewController") as! QuestionListTableViewController
 
-        if nameTextField.isHidden {
-            // Авторизация
-            app.api.login(username: nameTextField.text!, password: passwordTextField.text!, completion: {
+        app.api.login(username: nameTextField.text!, password: passwordTextField.text!, completion: {
                 magic("Completion successful")
-        
             // Процесс перехода на указанный выше контролёр
             self.present(controller, animated:true, completion:nil)
-            })
-      
-        } else {
-            // Регистрация
-            app.api.signup(email: nameTextField.text!, login: nameTextField.text!, password: passwordTextField.text!, completion: {
-                magic("Registration successful")
-        
-                // Процесс перехода на указанный выше контролёр
-                self.present(controller, animated: true, completion: nil)
-            })
-        }
+        })
+
+    }
     
     // TODO: credentials encoded in base64
 //    let username = emailTextField.text!
@@ -107,8 +90,8 @@ class LoginViewController: UIViewController {
   }
   
   /// Забыл пароль, друг?
-  @IBAction func tapForgetPassButton(_ sender: Any) {}
-  
+//  @IBAction func tapForgetPassButton(_ sender: Any) {}
+
   /*
    // MARK: - Navigation
    
@@ -119,4 +102,4 @@ class LoginViewController: UIViewController {
    }
    */
   
-}
+

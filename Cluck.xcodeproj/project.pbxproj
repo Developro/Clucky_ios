@@ -14,6 +14,7 @@
 		784207E12108903100609040 /* MenuTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E02108903100609040 /* MenuTableTableViewController.swift */; };
 		784207E32108B25E00609040 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E22108B25E00609040 /* NavigationButton.swift */; };
 		784207E52108B4EA00609040 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E42108B4EA00609040 /* SignUpViewController.swift */; };
+		784207E72108BFE100609040 /* ButtonsBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E62108BFE100609040 /* ButtonsBehavior.swift */; };
 		E142C76520BFEB28008F39D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E142C76420BFEB28008F39D8 /* AppDelegate.swift */; };
 		E142C76A20BFEB28008F39D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E142C76820BFEB28008F39D8 /* Main.storyboard */; };
 		E142C76C20BFEB2C008F39D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E142C76B20BFEB2C008F39D8 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		784207E02108903100609040 /* MenuTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableTableViewController.swift; sourceTree = "<group>"; };
 		784207E22108B25E00609040 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		784207E42108B4EA00609040 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		784207E62108BFE100609040 /* ButtonsBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsBehavior.swift; sourceTree = "<group>"; };
 		B922777417271D0804958E32 /* Pods_Cluck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cluck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76120BFEB28008F39D8 /* Cluck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cluck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76420BFEB28008F39D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				E1AAE5FF20E54DBC004A8452 /* MyQuestions */,
 				E1E0A9C920D45688003E421C /* Api */,
 				E1E0A9CE20D551BD003E421C /* Model */,
+				784207E62108BFE100609040 /* ButtonsBehavior.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				E142C77720BFF32D008F39D8 /* LoginViewController.swift in Sources */,
 				E142C79A20C318FF008F39D8 /* Label+Extention.swift in Sources */,
 				E1E0A9CD20D551A9003E421C /* App.swift in Sources */,
+				784207E72108BFE100609040 /* ButtonsBehavior.swift in Sources */,
 				782E493321086B7200402623 /* WelcomeViewController.swift in Sources */,
 				784207E12108903100609040 /* MenuTableTableViewController.swift in Sources */,
 				E142C79E20C32858008F39D8 /* AddQuestionViewController.swift in Sources */,
