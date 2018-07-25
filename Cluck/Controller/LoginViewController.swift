@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    
     // Temporary for testing registeration page
     // emailTextField.text     = "info@info.com"
     // passwordTextField.text  = "123456"
