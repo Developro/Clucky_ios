@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		14DDF5AA20FCD79400C75D59 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDF5A920FCD79400C75D59 /* Bool.swift */; };
 		6C9C2E1260A8190374365E80 /* Pods_Cluck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B922777417271D0804958E32 /* Pods_Cluck.framework */; };
+		782E493321086B7200402623 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E493221086B7200402623 /* WelcomeViewController.swift */; };
+		784207DF21087C0E00609040 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207DE21087C0E00609040 /* RootViewController.swift */; };
+		784207E12108903100609040 /* MenuTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E02108903100609040 /* MenuTableTableViewController.swift */; };
 		E142C76520BFEB28008F39D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E142C76420BFEB28008F39D8 /* AppDelegate.swift */; };
 		E142C76A20BFEB28008F39D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E142C76820BFEB28008F39D8 /* Main.storyboard */; };
 		E142C76C20BFEB2C008F39D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E142C76B20BFEB2C008F39D8 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		14DDF5A920FCD79400C75D59 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
+		782E493221086B7200402623 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		784207DE21087C0E00609040 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		784207E02108903100609040 /* MenuTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableTableViewController.swift; sourceTree = "<group>"; };
 		B922777417271D0804958E32 /* Pods_Cluck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cluck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76120BFEB28008F39D8 /* Cluck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cluck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76420BFEB28008F39D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +97,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		782E493421086B9A00402623 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E142C76420BFEB28008F39D8 /* AppDelegate.swift */,
+				784207DE21087C0E00609040 /* RootViewController.swift */,
+				784207E02108903100609040 /* MenuTableTableViewController.swift */,
+				782E493221086B7200402623 /* WelcomeViewController.swift */,
+				E142C77620BFF32D008F39D8 /* LoginViewController.swift */,
+				E142C77820C02847008F39D8 /* QuestionListTableViewController.swift */,
+				E142C77A20C0294A008F39D8 /* QuestionListTableViewCell.swift */,
+				E142C79420C1D473008F39D8 /* SideMenuTableViewController.swift */,
+				E142C79620C2F9E7008F39D8 /* SideMenuTableViewCell.swift */,
+				E142C79D20C32858008F39D8 /* AddQuestionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		782E493521086BA300402623 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E142C76820BFEB28008F39D8 /* Main.storyboard */,
+				E142C76D20BFEB2C008F39D8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		782E493621086BAD00402623 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1AAE5FF20E54DBC004A8452 /* MyQuestions */,
+				E1E0A9C920D45688003E421C /* Api */,
+				E1E0A9CE20D551BD003E421C /* Model */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8332E108F632627D380EDD17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,21 +162,12 @@
 		E142C76320BFEB28008F39D8 /* Cluck */ = {
 			isa = PBXGroup;
 			children = (
-				E1AAE5FF20E54DBC004A8452 /* MyQuestions */,
-				E1E0A9CE20D551BD003E421C /* Model */,
-				E1E0A9C920D45688003E421C /* Api */,
-				E142C76820BFEB28008F39D8 /* Main.storyboard */,
-				E142C76420BFEB28008F39D8 /* AppDelegate.swift */,
-				E142C77620BFF32D008F39D8 /* LoginViewController.swift */,
-				E142C77820C02847008F39D8 /* QuestionListTableViewController.swift */,
-				E142C77A20C0294A008F39D8 /* QuestionListTableViewCell.swift */,
-				E142C79420C1D473008F39D8 /* SideMenuTableViewController.swift */,
-				E142C79620C2F9E7008F39D8 /* SideMenuTableViewCell.swift */,
-				E142C79D20C32858008F39D8 /* AddQuestionViewController.swift */,
+				782E493621086BAD00402623 /* Model */,
+				782E493521086BA300402623 /* View */,
+				782E493421086B9A00402623 /* Controller */,
 				E142C76B20BFEB2C008F39D8 /* Assets.xcassets */,
 				E142C79820C318C6008F39D8 /* Extentions */,
 				E142C78820C031CF008F39D8 /* Resources */,
-				E142C76D20BFEB2C008F39D8 /* LaunchScreen.storyboard */,
 				E142C77020BFEB2C008F39D8 /* Info.plist */,
 			);
 			path = Cluck;
@@ -316,10 +349,13 @@
 				E142C77720BFF32D008F39D8 /* LoginViewController.swift in Sources */,
 				E142C79A20C318FF008F39D8 /* Label+Extention.swift in Sources */,
 				E1E0A9CD20D551A9003E421C /* App.swift in Sources */,
+				782E493321086B7200402623 /* WelcomeViewController.swift in Sources */,
+				784207E12108903100609040 /* MenuTableTableViewController.swift in Sources */,
 				E142C79E20C32858008F39D8 /* AddQuestionViewController.swift in Sources */,
 				E142C77B20C0294B008F39D8 /* QuestionListTableViewCell.swift in Sources */,
 				E1E6A26320FBBDC700D9AFAF /* Cluck.xcdatamodeld in Sources */,
 				E142C76520BFEB28008F39D8 /* AppDelegate.swift in Sources */,
+				784207DF21087C0E00609040 /* RootViewController.swift in Sources */,
 				14DDF5AA20FCD79400C75D59 /* Bool.swift in Sources */,
 				E1AAE60120E54DE6004A8452 /* MyQuestionsTableViewController.swift in Sources */,
 				E1AAE60320E54E44004A8452 /* MyQuestionsTableViewCell.swift in Sources */,
