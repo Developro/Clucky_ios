@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  SignUpViewController.swift
 //  Cluck
 //
 //  Created by Djaflienda on 25.07.2018.
@@ -8,33 +8,23 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
-    @IBAction func toggleSideMenu(_ sender: UIBarButtonItem) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navBarBackground.png"), for: .default)
         
         navigationItem.rightBarButtonItem = NavigationButton.createNavigationButtonOf(type: .menuButton, with: #selector(menuPressed), on: self)
-
-
     }
-    
+
     @objc func menuPressed() {
         //убрать в другой класс
         //пока заглушка
         NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
-    
+
+
 }

@@ -12,6 +12,8 @@
 		782E493321086B7200402623 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E493221086B7200402623 /* WelcomeViewController.swift */; };
 		784207DF21087C0E00609040 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207DE21087C0E00609040 /* RootViewController.swift */; };
 		784207E12108903100609040 /* MenuTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E02108903100609040 /* MenuTableTableViewController.swift */; };
+		784207E32108B25E00609040 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E22108B25E00609040 /* NavigationButton.swift */; };
+		784207E52108B4EA00609040 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E42108B4EA00609040 /* SignUpViewController.swift */; };
 		E142C76520BFEB28008F39D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E142C76420BFEB28008F39D8 /* AppDelegate.swift */; };
 		E142C76A20BFEB28008F39D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E142C76820BFEB28008F39D8 /* Main.storyboard */; };
 		E142C76C20BFEB2C008F39D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E142C76B20BFEB2C008F39D8 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		782E493221086B7200402623 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		784207DE21087C0E00609040 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		784207E02108903100609040 /* MenuTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableTableViewController.swift; sourceTree = "<group>"; };
+		784207E22108B25E00609040 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		784207E42108B4EA00609040 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B922777417271D0804958E32 /* Pods_Cluck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cluck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76120BFEB28008F39D8 /* Cluck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cluck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76420BFEB28008F39D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				784207E02108903100609040 /* MenuTableTableViewController.swift */,
 				782E493221086B7200402623 /* WelcomeViewController.swift */,
 				E142C77620BFF32D008F39D8 /* LoginViewController.swift */,
+				784207E42108B4EA00609040 /* SignUpViewController.swift */,
 				E142C77820C02847008F39D8 /* QuestionListTableViewController.swift */,
 				E142C77A20C0294A008F39D8 /* QuestionListTableViewCell.swift */,
 				E142C79420C1D473008F39D8 /* SideMenuTableViewController.swift */,
@@ -119,6 +124,7 @@
 			children = (
 				E142C76820BFEB28008F39D8 /* Main.storyboard */,
 				E142C76D20BFEB2C008F39D8 /* LaunchScreen.storyboard */,
+				784207E22108B25E00609040 /* NavigationButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,7 +363,9 @@
 				E142C76520BFEB28008F39D8 /* AppDelegate.swift in Sources */,
 				784207DF21087C0E00609040 /* RootViewController.swift in Sources */,
 				14DDF5AA20FCD79400C75D59 /* Bool.swift in Sources */,
+				784207E32108B25E00609040 /* NavigationButton.swift in Sources */,
 				E1AAE60120E54DE6004A8452 /* MyQuestionsTableViewController.swift in Sources */,
+				784207E52108B4EA00609040 /* SignUpViewController.swift in Sources */,
 				E1AAE60320E54E44004A8452 /* MyQuestionsTableViewCell.swift in Sources */,
 				E142C79720C2F9E8008F39D8 /* SideMenuTableViewCell.swift in Sources */,
 				E142C77920C02847008F39D8 /* QuestionListTableViewController.swift in Sources */,

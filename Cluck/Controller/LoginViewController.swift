@@ -4,85 +4,73 @@ import Magic
 class LoginViewController: UIViewController {
   
   //Outlets
-  @IBOutlet weak var loginRegistrationSegment: UISegmentedControl!
-  @IBOutlet weak var emailTextField: UITextField!
-  @IBOutlet weak var passwordTextField: UITextField!
-  @IBOutlet weak var nameTextField: UITextField!
-  @IBOutlet weak var loginButton: UIButton!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     
-    // Temporary for testing registeration page
-    // emailTextField.text     = "info@info.com"
-    // passwordTextField.text  = "123456"
-    // nameTextField.text      = "someExample"  
+    override func viewDidLoad() {
+        super.viewDidLoad()
     
-    nameTextField.isHidden = true
-    loginButton.layer.cornerRadius = 5
-    //passwordTextField.isSecureTextEntry = true - done through main storyboard
-    
-    //Looks for single or multiple taps.
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-    
-    //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-    //tap.cancelsTouchesInView = false
-    
-    view.addGestureRecognizer(tap)
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    
-  }
-  
-  // MARK: Functions
-  
-  //Calls this function when the tap is recognized.
-  @objc func dismissKeyboard() {
-    //Causes the view (or one of its embedded text fields) to resign the first responder status.
-    view.endEditing(true)
-  }
-  
-  // MARK: IBAction functions
-  
-  /// Нажатие на сегмент выбора "Вход/Регистрация"
-  @IBAction func tapLoginSegment(_ sender: Any) {
-    if loginRegistrationSegment.selectedSegmentIndex == 0 {
-      nameTextField.isHidden.toggle()
-      loginButton.setTitle("Войти", for: .normal)
+        // Temporary for testing registeration page
+        // emailTextField.text     = "info@info.com"
+        // passwordTextField.text  = "123456"
+        // nameTextField.text      = "someExample"
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navBarBackground.png"), for: .default)
+        
+        navigationItem.rightBarButtonItem = NavigationButton.createNavigationButtonOf(type: .menuButton, with: #selector(menuPressed), on: self)
+        
+        nameTextField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
-    if loginRegistrationSegment.selectedSegmentIndex == 1 {
-      nameTextField.isHidden.toggle()
-      loginButton.setTitle("Зарегистрироваться", for: .normal)
-    }
-  }
-  
-  // Процесс Авторизации/Регистрации при нажатии на кнопку Войти/Зарегистрироваться
-  @IBAction func tapEnterButton(_ sender: Any) {
     
-    // Обозначение контролёра, к которому будет совершён переход по окончании автоизационного замыкания
-    let controller = self.storyboard?.instantiateViewController(withIdentifier: "QuestionListTableViewController") as! QuestionListTableViewController
+    @objc func menuPressed() {
+        //убрать в другой класс
+        //пока заглушка
+        NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
+    }
+    
+    // MARK: Functions
+  
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+  
+    // MARK: IBAction functions
 
-    if nameTextField.isHidden {
-      // Авторизация
-      app.api.login(username: emailTextField.text!, password: passwordTextField.text!, completion: {
-        magic("Completion successful")
+    // Процесс Авторизации/Регистрации при нажатии на кнопку Войти/Зарегистрироваться
+    @IBAction func tapEnterButton(_ sender: Any) {
+    
+        // Обозначение контролёра, к которому будет совершён переход по окончании автоизационного замыкания
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "QuestionListTableViewController") as! QuestionListTableViewController
+
+        if nameTextField.isHidden {
+            // Авторизация
+            app.api.login(username: nameTextField.text!, password: passwordTextField.text!, completion: {
+                magic("Completion successful")
         
-        // Процесс перехода на указанный выше контролёр
-        self.present(controller, animated:true, completion:nil)
-      })
+            // Процесс перехода на указанный выше контролёр
+            self.present(controller, animated:true, completion:nil)
+            })
       
-    } else {
-      // Регистрация
-      app.api.signup(email: emailTextField.text!, login: nameTextField.text!, password: passwordTextField.text!, completion: {
-        magic("Registration successful")
+        } else {
+            // Регистрация
+            app.api.signup(email: nameTextField.text!, login: nameTextField.text!, password: passwordTextField.text!, completion: {
+                magic("Registration successful")
         
-        // Процесс перехода на указанный выше контролёр
-        self.present(controller, animated: true, completion: nil)
-      })
-    }
+                // Процесс перехода на указанный выше контролёр
+                self.present(controller, animated: true, completion: nil)
+            })
+        }
     
     // TODO: credentials encoded in base64
 //    let username = emailTextField.text!
