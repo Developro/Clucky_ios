@@ -21,7 +21,6 @@ class RootViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
     
-    //SOME COMMENT - DELETE LATER
     
     @objc func toggleSideMenu() {
 
