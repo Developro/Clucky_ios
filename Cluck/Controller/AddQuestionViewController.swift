@@ -10,18 +10,15 @@ import UIKit
 
 class AddQuestionViewController: UIViewController {
     
-    @IBOutlet weak var menuButton: UIButton!
-    @IBOutlet weak var askQuestionButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let menuBarButton = NavigationButton.createNavigationButtonOf(type: .menuButton, with: #selector(SWRevealViewController.revealToggle(_:)), on: revealViewController())
+        let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        let backBarButton = NavigationButton.createNavigationButtonOf(type: .backButton, with: #selector(backButtonTapped), on: self)
+        // нужно найти какой-то выход, чтобы не добавлять кучу spacer для промежутка между кнопками
+        navigationItem.leftBarButtonItems = [backBarButton, spacer, spacer, spacer, menuBarButton]
 
-        let origImage = UIImage(named: "menuIcon")
-        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
-        menuButton.setImage(tintedImage, for: .normal)
-        menuButton.tintColor = .gray
-        askQuestionButton.layer.cornerRadius = 5
-        //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddQuestionViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
@@ -33,8 +30,8 @@ class AddQuestionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func back() {
-        dismiss(animated: true, completion: nil)
+    @objc func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
 
     //Calls this function when the tap is recognized.

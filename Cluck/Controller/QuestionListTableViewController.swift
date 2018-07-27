@@ -14,16 +14,20 @@ class QuestionListTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navBarBackground.png"), for: .default)
+    navigationItem.leftBarButtonItem = NavigationButton.createNavigationButtonOf(type: .menuButton, with: #selector(SWRevealViewController.revealToggle(_:)), on: revealViewController())
+    navigationItem.rightBarButtonItem = NavigationButton.createNavigationButtonOf(type: .askQuestion, with: #selector(questionButtonTapped), on: self)
+    
+    self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    
+    let tempImageView = UIImageView(image: UIImage(named: "background"))
+    tempImageView.frame = tableView.frame
+    tableView.backgroundView = tempImageView
+    
     app.api.loadUserInfo(id: 6, completion: {
       magic("User info loaded")
     })
     
-    filterButton.layer.cornerRadius = 5
-    
-    let origImage             = UIImage(named: "menuIcon")
-    let tintedImage           = origImage?.withRenderingMode(.alwaysTemplate)
-    menuIconButton.setImage(tintedImage, for: .normal)
-    menuIconButton.tintColor  = .gray
     self.tableView.rowHeight  = 140
   }
   
@@ -33,6 +37,15 @@ class QuestionListTableViewController: UITableViewController {
       self.questions = questions
     })
   }
+    
+    // убрать в отдельный класс ButtonsBehavior
+    @objc func questionButtonTapped() {
+        print("There will be asking functionallity")
+        performSegue(withIdentifier: "askQuestion", sender: nil)
+    }
+    @objc func filterButtonTapped() {
+        print("There will be filtering functionallity")
+    }
 
   // MARK: - Table view data source
   
@@ -43,18 +56,18 @@ class QuestionListTableViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete implementation, return the number of rows
-    return questions.count
+    return 5
   }
   
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "questionListCell", for: indexPath) as! QuestionListTableViewCell
-    
-    let question = questions[indexPath.row]
-    
-    cell.questionTitleLabel.text = question.subject
-    cell.questionPreviewLabel.text = question.question
-    cell.questionImage.image = imagesArray[0]
+//
+//    let question = questions[indexPath.row]
+//
+//    cell.questionTitleLabel.text = question.subject
+//    cell.questionPreviewLabel.text = question.question
+//    cell.questionImage.image = imagesArray[0]
     
     return cell
   }

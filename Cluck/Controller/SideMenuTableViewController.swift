@@ -50,7 +50,7 @@ class SideMenuTableViewController: UITableViewController {
       let cell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell", for: indexPath) as! SideMenuTableViewCell
       return cell
     } else {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell2", for: indexPath)
+      let cell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell", for: indexPath)
       cell.textLabel?.text = menuArray[indexPath.row-1]
       cell.textLabel?.textColor = .white
       cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17.0)
