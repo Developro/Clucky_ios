@@ -2,9 +2,7 @@ import UIKit
 import Magic
 
 class LoginViewController: UIViewController {
-  
-    let buttonsBehavior = ButtonsBehavior()
-  
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -17,20 +15,14 @@ class LoginViewController: UIViewController {
         // passwordTextField.text  = "123456"
         // nameTextField.text      = "someExample"
         
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navBarBackground.png"), for: .default)
-        
-        navigationItem.rightBarButtonItem = NavigationButton.createNavigationButtonOf(type: .menuButton, with: #selector(buttonsBehavior.menuPressed), on: self)
-        
-        nameTextField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
-        
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        
     }
-    
+
     // MARK: Functions
   
     //Calls this function when the tap is recognized.
@@ -45,12 +37,12 @@ class LoginViewController: UIViewController {
     @IBAction func tapEnterButton(_ sender: Any) {
     
         // Обозначение контролёра, к которому будет совершён переход по окончании автоизационного замыкания
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "QuestionListTableViewController") as! QuestionListTableViewController
+//        let controller = self.storyboard?.instantiateViewController(withIdentifier: "") as! RootViewController
 
         app.api.login(username: nameTextField.text!, password: passwordTextField.text!, completion: {
                 magic("Completion successful")
             // Процесс перехода на указанный выше контролёр
-            self.present(controller, animated:true, completion:nil)
+//            self.present(controller, animated:true, completion:nil)
         })
 
     }

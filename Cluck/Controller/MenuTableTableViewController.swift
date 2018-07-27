@@ -2,18 +2,24 @@
 //  MenuTableTableViewController.swift
 //  Cluck
 //
-//  Created by Djaflienda on 25.07.2018.
+//  Created by Djaflienda on 26.07.2018.
 //  Copyright © 2018 Наталья Синицына. All rights reserved.
 //
 
 import UIKit
 
-class MenuTableTableViewController: UITableViewController {
+class MenuTableViewController: UITableViewController {
 
+    let array = ["Profile", "Questions", "My Questions", "My Answers", "Leaderboard", "Settings", "Log Out"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        view.backgroundColor = UIColor.darkGray
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,18 +36,27 @@ class MenuTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 7
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: array[indexPath.row], for: indexPath)
         
-
+        cell.textLabel?.text = array[indexPath.row]
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 6 {
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeScreen") as! WelcomeViewController
+            self.present(controller, animated: true) {
+                self.navigationController?.popViewController(animated: true)
+
+            }
+            
+        }
+    }
+ 
 
     /*
     // Override to support conditional editing of the table view.
