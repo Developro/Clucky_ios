@@ -2,12 +2,11 @@ import UIKit
 import Magic
 
 class QuestionListTableViewController: UITableViewController {
-  
-  @IBOutlet weak var filterButton: UIButton!
-  @IBOutlet weak var menuIconButton: UIButton!
-  
-  let questionTitles  = ["Медицина", "Продукты", "Отношения", "Право", "Образование", "Спорт"]
-  let imagesArray     = [UIImage(named: "nature1.jpg")!, UIImage(named: "nature2.jpeg")!, UIImage(named: "nature3.jpeg")!, UIImage(named: "nature4.jpeg")!, UIImage(named: "nature5.jpeg")!, UIImage(named: "nature6.jpeg")!]
+
+    @IBOutlet weak var cellCategoryLabel: UILabel!
+    
+    let questionTitles  = ["Медицина", "Продукты", "Отношения", "Право", "Образование", "Спорт"]
+//  let imagesArray     = ["HealthCategory", "AutoCategory", "HealthCategory", "AutoCategory", "HealthCategory", "AutoCategory", "HealthCategory", "AutoCategory", "HealthCategory", "AutoCategory", "HealthCategory", "AutoCategory", "HealthCategory", "AutoCategory", "HealthCategory", "AutoCategory"]
   
   var questions = [Question]()
   
@@ -28,7 +27,7 @@ class QuestionListTableViewController: UITableViewController {
       magic("User info loaded")
     })
     
-    self.tableView.rowHeight  = 140
+    self.tableView.rowHeight  = 100
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -56,13 +55,13 @@ class QuestionListTableViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete implementation, return the number of rows
-    return 5
+    return 16
   }
   
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "questionListCell", for: indexPath) as! QuestionListTableViewCell
-//
+    let cell = tableView.dequeueReusableCell(withIdentifier: "questionListCell", for: indexPath)
+//    cell.backgroundColor = UIColor(patternImage: UIImage(named: imagesArray[indexPath.row])!)
 //    let question = questions[indexPath.row]
 //
 //    cell.questionTitleLabel.text = question.subject

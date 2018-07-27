@@ -10,10 +10,10 @@ class QuestionListTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    questionAuthorLabel.text = " Алёнушка"
-    questionAuthorLabel.addImageWith(name: "user", behindText: false, width: 14, height: 14)
-    answerButton.titleLabel?.text = " ОТВЕТИТЬ"
-    answerButton.titleLabel?.addImageWith(name: "anchor", behindText: false, width: 15, height: 15)
+//    questionAuthorLabel.text = " Алёнушка"
+//    questionAuthorLabel.addImageWith(name: "user", behindText: false, width: 14, height: 14)
+//    answerButton.titleLabel?.text = " ОТВЕТИТЬ"
+//    answerButton.titleLabel?.addImageWith(name: "anchor", behindText: false, width: 15, height: 15)
   }
   
   override func setSelected(_ selected: Bool, animated: Bool) {

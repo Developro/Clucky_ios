@@ -20,6 +20,10 @@ class SignUpViewController: UIViewController {
 
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @IBAction func tapSignUpButton(_ sender: Any) {
         // Обозначение контролёра, к которому будет совершён переход по окончании автоизационного замыкания
 //        let controller = self.storyboard?.instantiateViewController(withIdentifier: "") as! RootViewController

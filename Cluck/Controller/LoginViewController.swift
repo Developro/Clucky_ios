@@ -15,22 +15,14 @@ class LoginViewController: UIViewController {
         // passwordTextField.text  = "123456"
         // nameTextField.text      = "someExample"
         
-        //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 
     // MARK: Functions
-  
-    //Calls this function when the tap is recognized.
-    @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
-  
+
     // MARK: IBAction functions
 
     // Процесс Авторизации/Регистрации при нажатии на кнопку Войти/Зарегистрироваться
