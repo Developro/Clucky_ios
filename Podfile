@@ -7,4 +7,7 @@ target 'Cluck' do
 
   # Pods for Cluck
   pod 'Magic'
+  pod 'GoogleSignIn'
+  pod 'SwiftyJSON'
+  
 end

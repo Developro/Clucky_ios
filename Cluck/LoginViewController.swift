@@ -1,7 +1,9 @@
 import UIKit
 import Magic
+import GoogleSignIn
+import WebKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate  {
   
   //Outlets
   @IBOutlet weak var loginRegistrationSegment: UISegmentedControl!
@@ -9,7 +11,18 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var loginButton: UIButton!
-  
+    @IBOutlet weak var loginGoogleButton: UIButton!    
+    @IBOutlet weak var loginVKButton: UIButton!
+    
+    let signIn = GIDSignIn.sharedInstance()
+    var webView = WKWebView()
+   
+    let queue: OperationQueue = {
+        let queue = OperationQueue()
+        queue.qualityOfService = .userInteractive
+        return queue
+    }()
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -29,7 +42,14 @@ class LoginViewController: UIViewController {
     //tap.cancelsTouchesInView = false
     
     view.addGestureRecognizer(tap)
+    
+    googleSign()
+    
   }
+    
+    
+    
+    
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -129,5 +149,138 @@ class LoginViewController: UIViewController {
    // Pass the selected object to the new view controller.
    }
    */
-  
+    
+    
+}
+
+extension LoginViewController {
+
+    @IBAction func tapConnectGoogle(_ sender: Any) {
+        signIn?.signIn()
+        goToViewController(vc: "QuestionListTableViewController")
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error != nil {
+            print(error)
+        }
+        print(user.profile.email)
+        
+        let getCacheImage = GetCacheImage(url: ((user?.profile.imageURL(withDimension: 50))?.absoluteString)!)
+        
+        getCacheImage.main()
+        
+        if let outputImage = getCacheImage.outputImage {
+            loginGoogleButton.setImage(outputImage, for: .normal)
+            loginGoogleButton.imageView?.layer.cornerRadius = (outputImage.size.height / 2)
+            //доделать через Class
+            //                let setImageToRow = SetImageToElement(button: loginGoogleButton)
+            //                setImageToRow.addDependency(getCacheImage)
+            //                queue.addOperation(getCacheImage)
+            //                OperationQueue.main.addOperation(setImageToRow)
+        }
+        
+        
+    }
+    
+    func googleSign() {
+        
+        signIn?.clientID = "603058356714-ocmggf18knpcm3icvknjn0ttnh27tlhn.apps.googleusercontent.com"
+        signIn?.language = "ru"
+        signIn?.uiDelegate = self
+        signIn?.delegate = self
+        
+        if (signIn?.hasAuthInKeychain() == true) {
+            signIn?.signIn()
+        }
+    }
+    
+    func goToViewController(vc: String){
+        
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: vc) {
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    
+}
+
+extension LoginViewController: WKNavigationDelegate {
+    
+    @IBAction func tapConnectVK(_ sender: UIButton) {
+        
+        let viewBounds = self.view.bounds
+        webView.frame = CGRect(x: viewBounds.minX, y: viewBounds.minY, width: viewBounds.maxX, height: viewBounds.maxY)
+        webView.navigationDelegate = self
+        
+        let service = VKService()
+        if service.token == "" {
+            
+            self.view.addSubview(webView)
+            
+            if let request = service.vkAuthRequest()  {
+                webView.load(request)
+            }
+        } else {getUserVK()}
+    }
+    
+    func getUserVK(){
+        
+        let service = VKService()
+        service.getUsers(token: service.token) {data, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            if let data = data {
+                let iconVK = data[0].logo
+                let getCacheImage = GetCacheImage(url: iconVK)
+                
+                getCacheImage.main()
+                
+                if let outputImage = getCacheImage.outputImage {
+                    DispatchQueue.main.async {
+                        self.loginVKButton.setImage(outputImage, for: .normal)
+                        self.loginVKButton.imageView?.layer.cornerRadius = (outputImage.size.height / 2)
+                    }
+                    
+                    //доделать через Class
+                    //                let setImageToRow = SetImageToElement(button: loginGoogleButton)
+                    //                setImageToRow.addDependency(getCacheImage)
+                    //                queue.addOperation(getCacheImage)
+                    //                OperationQueue.main.addOperation(setImageToRow)
+                }
+                self.goToViewController(vc: "QuestionListTableViewController")
+                return
+            }
+            
+        }
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Swift.Void){
+        guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment
+            else {
+                decisionHandler(.allow)
+                return
+        }
+        let params = fragment
+            .components(separatedBy: "&")
+            .map { $0.components(separatedBy: "=") }
+            .reduce([String: String]()) { result, param in
+                var dict = result
+                let key = param[0]
+                let value = param[1]
+                dict[key] = value
+                return dict
+        }
+        if let token = params["access_token"]{
+            print(token)
+            let service = VKService()
+            service.token  = token
+            getUserVK()
+        }
+        
+        webView.isHidden = true
+        decisionHandler(.cancel)
+        
+    }
 }

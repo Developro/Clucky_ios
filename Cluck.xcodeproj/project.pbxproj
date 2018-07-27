@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		14DDF5AA20FCD79400C75D59 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDF5A920FCD79400C75D59 /* Bool.swift */; };
 		6C9C2E1260A8190374365E80 /* Pods_Cluck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B922777417271D0804958E32 /* Pods_Cluck.framework */; };
+		787401A92109A31B00434C02 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 787401A82109A31B00434C02 /* credentials.plist */; };
+		787401AB2109AF4E00434C02 /* GetCacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787401AA2109AF4E00434C02 /* GetCacheImage.swift */; };
+		787401AD2109B07800434C02 /* SetImageToElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787401AC2109B07800434C02 /* SetImageToElement.swift */; };
+		787401AF210A1F2600434C02 /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787401AE210A1F2500434C02 /* VKService.swift */; };
 		E142C76520BFEB28008F39D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E142C76420BFEB28008F39D8 /* AppDelegate.swift */; };
 		E142C76A20BFEB28008F39D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E142C76820BFEB28008F39D8 /* Main.storyboard */; };
 		E142C76C20BFEB2C008F39D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E142C76B20BFEB2C008F39D8 /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		14DDF5A920FCD79400C75D59 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
+		787401A82109A31B00434C02 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		787401AA2109AF4E00434C02 /* GetCacheImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCacheImage.swift; sourceTree = "<group>"; };
+		787401AC2109B07800434C02 /* SetImageToElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetImageToElement.swift; sourceTree = "<group>"; };
+		787401AE210A1F2500434C02 /* VKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
 		B922777417271D0804958E32 /* Pods_Cluck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cluck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76120BFEB28008F39D8 /* Cluck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cluck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76420BFEB28008F39D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 				E142C78820C031CF008F39D8 /* Resources */,
 				E142C76D20BFEB2C008F39D8 /* LaunchScreen.storyboard */,
 				E142C77020BFEB2C008F39D8 /* Info.plist */,
+				787401A82109A31B00434C02 /* credentials.plist */,
 			);
 			path = Cluck;
 			sourceTree = "<group>";
@@ -158,6 +167,8 @@
 		E142C79820C318C6008F39D8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				787401AC2109B07800434C02 /* SetImageToElement.swift */,
+				787401AA2109AF4E00434C02 /* GetCacheImage.swift */,
 				E142C79920C318FE008F39D8 /* Label+Extention.swift */,
 				14DDF5A920FCD79400C75D59 /* Bool.swift */,
 			);
@@ -176,6 +187,7 @@
 		E1E0A9C920D45688003E421C /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				787401AE210A1F2500434C02 /* VKService.swift */,
 				E1E0A9CA20D456DA003E421C /* Api.swift */,
 				E1E0A9CC20D551A8003E421C /* App.swift */,
 			);
@@ -204,6 +216,7 @@
 				E142C75E20BFEB28008F39D8 /* Frameworks */,
 				E142C75F20BFEB28008F39D8 /* Resources */,
 				FE81718E68564A6257AD5C5B /* [CP] Embed Pods Frameworks */,
+				05AC194ED0C541002928879C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +270,7 @@
 				E142C78420C031B1008F39D8 /* nature3.jpeg in Resources */,
 				E142C78320C031B1008F39D8 /* nature6.jpeg in Resources */,
 				E142C7A020C34013008F39D8 /* original.png in Resources */,
+				787401A92109A31B00434C02 /* credentials.plist in Resources */,
 				E142C78520C031B1008F39D8 /* nature4.jpeg in Resources */,
 				E142C78620C031B1008F39D8 /* nature1.jpg in Resources */,
 				E142C78220C031B1008F39D8 /* nature5.jpeg in Resources */,
@@ -268,6 +282,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		05AC194ED0C541002928879C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cluck/Pods-Cluck-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cluck/Pods-Cluck-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CA5B6780934FD894A2DF0571 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,11 +325,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Cluck/Pods-Cluck-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Magic/Magic.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Magic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -311,11 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787401AD2109B07800434C02 /* SetImageToElement.swift in Sources */,
+				787401AB2109AF4E00434C02 /* GetCacheImage.swift in Sources */,
 				E1E6A26D20FD0A4000D9AFAF /* Question.swift in Sources */,
 				E1E0A9CB20D456DA003E421C /* Api.swift in Sources */,
 				E142C77720BFF32D008F39D8 /* LoginViewController.swift in Sources */,
 				E142C79A20C318FF008F39D8 /* Label+Extention.swift in Sources */,
 				E1E0A9CD20D551A9003E421C /* App.swift in Sources */,
+				787401AF210A1F2600434C02 /* VKService.swift in Sources */,
 				E142C79E20C32858008F39D8 /* AddQuestionViewController.swift in Sources */,
 				E142C77B20C0294B008F39D8 /* QuestionListTableViewCell.swift in Sources */,
 				E1E6A26320FBBDC700D9AFAF /* Cluck.xcdatamodeld in Sources */,
@@ -472,7 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FDAF4AFFQX;
+				DEVELOPMENT_TEAM = ST55Z8AWX9;
 				INFOPLIST_FILE = Cluck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -492,7 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FDAF4AFFQX;
+				DEVELOPMENT_TEAM = ST55Z8AWX9;
 				INFOPLIST_FILE = Cluck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
