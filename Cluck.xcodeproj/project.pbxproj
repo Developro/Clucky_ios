@@ -9,8 +9,20 @@
 /* Begin PBXBuildFile section */
 		14DDF5AA20FCD79400C75D59 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDF5A920FCD79400C75D59 /* Bool.swift */; };
 		6C9C2E1260A8190374365E80 /* Pods_Cluck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B922777417271D0804958E32 /* Pods_Cluck.framework */; };
+		782C46E22109B27100BB85F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C46E12109B27000BB85F0 /* SWRevealViewController.m */; };
+		782C46E52109C97600BB85F0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46E42109C97600BB85F0 /* ProfileViewController.swift */; };
+		782C46E72109C9C100BB85F0 /* MenuTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46E62109C9C100BB85F0 /* MenuTableTableViewController.swift */; };
+		782C46E9210B1A1500BB85F0 /* ProfileMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46E8210B1A1500BB85F0 /* ProfileMoreViewController.swift */; };
+		782C46EB210B1DF100BB85F0 /* MyQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46EA210B1DF100BB85F0 /* MyQuestionsViewController.swift */; };
+		782C46ED210B1E2900BB85F0 /* MyAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46EC210B1E2900BB85F0 /* MyAnswersViewController.swift */; };
+		782C46EF210B1E6A00BB85F0 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46EE210B1E6A00BB85F0 /* LeaderboardViewController.swift */; };
+		782C46F1210B1E7B00BB85F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46F0210B1E7B00BB85F0 /* SettingsViewController.swift */; };
+		782C46F3210B3B5700BB85F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782C46F2210B3B5700BB85F0 /* Main.storyboard */; };
+		782E493321086B7200402623 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E493221086B7200402623 /* WelcomeViewController.swift */; };
+		783EE97B210B4B5900138005 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783EE97A210B4B5900138005 /* QuestionViewController.swift */; };
+		784207E32108B25E00609040 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E22108B25E00609040 /* NavigationButton.swift */; };
+		784207E52108B4EA00609040 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E42108B4EA00609040 /* SignUpViewController.swift */; };
 		E142C76520BFEB28008F39D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E142C76420BFEB28008F39D8 /* AppDelegate.swift */; };
-		E142C76A20BFEB28008F39D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E142C76820BFEB28008F39D8 /* Main.storyboard */; };
 		E142C76C20BFEB2C008F39D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E142C76B20BFEB2C008F39D8 /* Assets.xcassets */; };
 		E142C76F20BFEB2C008F39D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E142C76D20BFEB2C008F39D8 /* LaunchScreen.storyboard */; };
 		E142C77720BFF32D008F39D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E142C77620BFF32D008F39D8 /* LoginViewController.swift */; };
@@ -38,10 +50,24 @@
 
 /* Begin PBXFileReference section */
 		14DDF5A920FCD79400C75D59 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
+		782C46DF2109B26F00BB85F0 /* Cluck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cluck-Bridging-Header.h"; sourceTree = "<group>"; };
+		782C46E02109B27000BB85F0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		782C46E12109B27000BB85F0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		782C46E42109C97600BB85F0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		782C46E62109C9C100BB85F0 /* MenuTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableTableViewController.swift; sourceTree = "<group>"; };
+		782C46E8210B1A1500BB85F0 /* ProfileMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMoreViewController.swift; sourceTree = "<group>"; };
+		782C46EA210B1DF100BB85F0 /* MyQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuestionsViewController.swift; sourceTree = "<group>"; };
+		782C46EC210B1E2900BB85F0 /* MyAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnswersViewController.swift; sourceTree = "<group>"; };
+		782C46EE210B1E6A00BB85F0 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		782C46F0210B1E7B00BB85F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		782C46F2210B3B5700BB85F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		782E493221086B7200402623 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		783EE97A210B4B5900138005 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		784207E22108B25E00609040 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		784207E42108B4EA00609040 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B922777417271D0804958E32 /* Pods_Cluck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cluck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76120BFEB28008F39D8 /* Cluck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cluck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E142C76420BFEB28008F39D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E142C76920BFEB28008F39D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E142C76B20BFEB2C008F39D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E142C76E20BFEB2C008F39D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E142C77020BFEB2C008F39D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +117,53 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		782E493421086B9A00402623 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E142C76420BFEB28008F39D8 /* AppDelegate.swift */,
+				782E493221086B7200402623 /* WelcomeViewController.swift */,
+				E142C77620BFF32D008F39D8 /* LoginViewController.swift */,
+				784207E42108B4EA00609040 /* SignUpViewController.swift */,
+				782C46E62109C9C100BB85F0 /* MenuTableTableViewController.swift */,
+				E142C77820C02847008F39D8 /* QuestionListTableViewController.swift */,
+				E142C77A20C0294A008F39D8 /* QuestionListTableViewCell.swift */,
+				783EE97A210B4B5900138005 /* QuestionViewController.swift */,
+				E142C79420C1D473008F39D8 /* SideMenuTableViewController.swift */,
+				E142C79620C2F9E7008F39D8 /* SideMenuTableViewCell.swift */,
+				E142C79D20C32858008F39D8 /* AddQuestionViewController.swift */,
+				782C46E42109C97600BB85F0 /* ProfileViewController.swift */,
+				782C46E8210B1A1500BB85F0 /* ProfileMoreViewController.swift */,
+				782C46EA210B1DF100BB85F0 /* MyQuestionsViewController.swift */,
+				782C46EC210B1E2900BB85F0 /* MyAnswersViewController.swift */,
+				782C46EE210B1E6A00BB85F0 /* LeaderboardViewController.swift */,
+				782C46F0210B1E7B00BB85F0 /* SettingsViewController.swift */,
+				782C46E02109B27000BB85F0 /* SWRevealViewController.h */,
+				782C46E12109B27000BB85F0 /* SWRevealViewController.m */,
+				782C46DF2109B26F00BB85F0 /* Cluck-Bridging-Header.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		782E493521086BA300402623 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				782C46F2210B3B5700BB85F0 /* Main.storyboard */,
+				E142C76D20BFEB2C008F39D8 /* LaunchScreen.storyboard */,
+				784207E22108B25E00609040 /* NavigationButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		782E493621086BAD00402623 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1AAE5FF20E54DBC004A8452 /* MyQuestions */,
+				E1E0A9C920D45688003E421C /* Api */,
+				E1E0A9CE20D551BD003E421C /* Model */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8332E108F632627D380EDD17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,21 +193,12 @@
 		E142C76320BFEB28008F39D8 /* Cluck */ = {
 			isa = PBXGroup;
 			children = (
-				E1AAE5FF20E54DBC004A8452 /* MyQuestions */,
-				E1E0A9CE20D551BD003E421C /* Model */,
-				E1E0A9C920D45688003E421C /* Api */,
-				E142C76820BFEB28008F39D8 /* Main.storyboard */,
-				E142C76420BFEB28008F39D8 /* AppDelegate.swift */,
-				E142C77620BFF32D008F39D8 /* LoginViewController.swift */,
-				E142C77820C02847008F39D8 /* QuestionListTableViewController.swift */,
-				E142C77A20C0294A008F39D8 /* QuestionListTableViewCell.swift */,
-				E142C79420C1D473008F39D8 /* SideMenuTableViewController.swift */,
-				E142C79620C2F9E7008F39D8 /* SideMenuTableViewCell.swift */,
-				E142C79D20C32858008F39D8 /* AddQuestionViewController.swift */,
+				782E493621086BAD00402623 /* Model */,
+				782E493521086BA300402623 /* View */,
+				782E493421086B9A00402623 /* Controller */,
 				E142C76B20BFEB2C008F39D8 /* Assets.xcassets */,
 				E142C79820C318C6008F39D8 /* Extentions */,
 				E142C78820C031CF008F39D8 /* Resources */,
-				E142C76D20BFEB2C008F39D8 /* LaunchScreen.storyboard */,
 				E142C77020BFEB2C008F39D8 /* Info.plist */,
 			);
 			path = Cluck;
@@ -226,6 +290,7 @@
 				TargetAttributes = {
 					E142C76020BFEB28008F39D8 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -253,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E142C76F20BFEB2C008F39D8 /* LaunchScreen.storyboard in Resources */,
+				782C46F3210B3B5700BB85F0 /* Main.storyboard in Resources */,
 				E142C78720C031B1008F39D8 /* nature2.jpeg in Resources */,
 				E142C78420C031B1008F39D8 /* nature3.jpeg in Resources */,
 				E142C78320C031B1008F39D8 /* nature6.jpeg in Resources */,
@@ -261,7 +327,6 @@
 				E142C78620C031B1008F39D8 /* nature1.jpg in Resources */,
 				E142C78220C031B1008F39D8 /* nature5.jpeg in Resources */,
 				E142C76C20BFEB2C008F39D8 /* Assets.xcassets in Resources */,
-				E142C76A20BFEB28008F39D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,34 +378,38 @@
 			files = (
 				E1E6A26D20FD0A4000D9AFAF /* Question.swift in Sources */,
 				E1E0A9CB20D456DA003E421C /* Api.swift in Sources */,
+				783EE97B210B4B5900138005 /* QuestionViewController.swift in Sources */,
+				782C46EF210B1E6A00BB85F0 /* LeaderboardViewController.swift in Sources */,
 				E142C77720BFF32D008F39D8 /* LoginViewController.swift in Sources */,
 				E142C79A20C318FF008F39D8 /* Label+Extention.swift in Sources */,
 				E1E0A9CD20D551A9003E421C /* App.swift in Sources */,
+				782E493321086B7200402623 /* WelcomeViewController.swift in Sources */,
+				782C46E9210B1A1500BB85F0 /* ProfileMoreViewController.swift in Sources */,
 				E142C79E20C32858008F39D8 /* AddQuestionViewController.swift in Sources */,
 				E142C77B20C0294B008F39D8 /* QuestionListTableViewCell.swift in Sources */,
 				E1E6A26320FBBDC700D9AFAF /* Cluck.xcdatamodeld in Sources */,
+				782C46E72109C9C100BB85F0 /* MenuTableTableViewController.swift in Sources */,
+				782C46E22109B27100BB85F0 /* SWRevealViewController.m in Sources */,
 				E142C76520BFEB28008F39D8 /* AppDelegate.swift in Sources */,
 				14DDF5AA20FCD79400C75D59 /* Bool.swift in Sources */,
+				784207E32108B25E00609040 /* NavigationButton.swift in Sources */,
 				E1AAE60120E54DE6004A8452 /* MyQuestionsTableViewController.swift in Sources */,
+				784207E52108B4EA00609040 /* SignUpViewController.swift in Sources */,
+				782C46ED210B1E2900BB85F0 /* MyAnswersViewController.swift in Sources */,
 				E1AAE60320E54E44004A8452 /* MyQuestionsTableViewCell.swift in Sources */,
+				782C46EB210B1DF100BB85F0 /* MyQuestionsViewController.swift in Sources */,
 				E142C79720C2F9E8008F39D8 /* SideMenuTableViewCell.swift in Sources */,
 				E142C77920C02847008F39D8 /* QuestionListTableViewController.swift in Sources */,
+				782C46E52109C97600BB85F0 /* ProfileViewController.swift in Sources */,
 				E142C79520C1D474008F39D8 /* SideMenuTableViewController.swift in Sources */,
 				E1E0A9D020D551D5003E421C /* User.swift in Sources */,
+				782C46F1210B1E7B00BB85F0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E142C76820BFEB28008F39D8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E142C76920BFEB28008F39D8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E142C76D20BFEB2C008F39D8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -471,6 +540,7 @@
 			baseConfigurationReference = F8A8960BC2359253C9384552 /* Pods-Cluck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FDAF4AFFQX;
 				INFOPLIST_FILE = Cluck/Info.plist;
@@ -481,6 +551,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = GB.Cluck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cluck/Controller/Cluck-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,6 +563,7 @@
 			baseConfigurationReference = E3412D02767C1ECEA093F95C /* Pods-Cluck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FDAF4AFFQX;
 				INFOPLIST_FILE = Cluck/Info.plist;
@@ -501,6 +574,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = GB.Cluck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cluck/Controller/Cluck-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
