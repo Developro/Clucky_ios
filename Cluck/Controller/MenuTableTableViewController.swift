@@ -45,6 +45,17 @@ class MenuTableViewController: UITableViewController {
         cell.textLabel?.text = array[indexPath.row]
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 6 {
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeScreen") as! WelcomeViewController
+            self.present(controller, animated: true) {
+                self.navigationController?.popViewController(animated: true)
+
+            }
+            
+        }
+    }
  
 
     /*

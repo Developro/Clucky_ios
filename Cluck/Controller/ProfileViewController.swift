@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController {
         navigationItem.leftBarButtonItem = NavigationButton.createNavigationButtonOf(type: .menuButton, with: #selector(SWRevealViewController.revealToggle(_:)), on: revealViewController())
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        view.addSubview(NavigationButton.createCircleLogo(with: CGPoint(x: 50, y: 100), with: "profileImage"))
     }
 
     override func didReceiveMemoryWarning() {

@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        
     }
 
     // MARK: Functions

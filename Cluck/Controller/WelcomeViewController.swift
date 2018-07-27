@@ -13,6 +13,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       view.addSubview(NavigationButton.createCircleLogo(with: CGPoint(x: view.frame.width / 2 - 75, y: 100), with: ""))
     }
 
 }

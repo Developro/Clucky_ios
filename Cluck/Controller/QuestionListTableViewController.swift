@@ -16,6 +16,7 @@ class QuestionListTableViewController: UITableViewController {
     
     navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navBarBackground.png"), for: .default)
     navigationItem.leftBarButtonItem = NavigationButton.createNavigationButtonOf(type: .menuButton, with: #selector(SWRevealViewController.revealToggle(_:)), on: revealViewController())
+    navigationItem.rightBarButtonItem = NavigationButton.createNavigationButtonOf(type: .askQuestion, with: #selector(questionButtonTapped), on: self)
     
     self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     
@@ -36,6 +37,15 @@ class QuestionListTableViewController: UITableViewController {
       self.questions = questions
     })
   }
+    
+    // убрать в отдельный класс ButtonsBehavior
+    @objc func questionButtonTapped() {
+        print("There will be asking functionallity")
+        performSegue(withIdentifier: "askQuestion", sender: nil)
+    }
+    @objc func filterButtonTapped() {
+        print("There will be filtering functionallity")
+    }
 
   // MARK: - Table view data source
   

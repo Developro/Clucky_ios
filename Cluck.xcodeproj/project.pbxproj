@@ -12,6 +12,11 @@
 		782C46E22109B27100BB85F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 782C46E12109B27000BB85F0 /* SWRevealViewController.m */; };
 		782C46E52109C97600BB85F0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46E42109C97600BB85F0 /* ProfileViewController.swift */; };
 		782C46E72109C9C100BB85F0 /* MenuTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46E62109C9C100BB85F0 /* MenuTableTableViewController.swift */; };
+		782C46E9210B1A1500BB85F0 /* ProfileMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46E8210B1A1500BB85F0 /* ProfileMoreViewController.swift */; };
+		782C46EB210B1DF100BB85F0 /* MyQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46EA210B1DF100BB85F0 /* MyQuestionsViewController.swift */; };
+		782C46ED210B1E2900BB85F0 /* MyAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46EC210B1E2900BB85F0 /* MyAnswersViewController.swift */; };
+		782C46EF210B1E6A00BB85F0 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46EE210B1E6A00BB85F0 /* LeaderboardViewController.swift */; };
+		782C46F1210B1E7B00BB85F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C46F0210B1E7B00BB85F0 /* SettingsViewController.swift */; };
 		782E493321086B7200402623 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E493221086B7200402623 /* WelcomeViewController.swift */; };
 		784207E32108B25E00609040 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E22108B25E00609040 /* NavigationButton.swift */; };
 		784207E52108B4EA00609040 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784207E42108B4EA00609040 /* SignUpViewController.swift */; };
@@ -49,6 +54,11 @@
 		782C46E12109B27000BB85F0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		782C46E42109C97600BB85F0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		782C46E62109C9C100BB85F0 /* MenuTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableTableViewController.swift; sourceTree = "<group>"; };
+		782C46E8210B1A1500BB85F0 /* ProfileMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMoreViewController.swift; sourceTree = "<group>"; };
+		782C46EA210B1DF100BB85F0 /* MyQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuestionsViewController.swift; sourceTree = "<group>"; };
+		782C46EC210B1E2900BB85F0 /* MyAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnswersViewController.swift; sourceTree = "<group>"; };
+		782C46EE210B1E6A00BB85F0 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		782C46F0210B1E7B00BB85F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		782E493221086B7200402623 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		784207E22108B25E00609040 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		784207E42108B4EA00609040 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +129,11 @@
 				E142C79620C2F9E7008F39D8 /* SideMenuTableViewCell.swift */,
 				E142C79D20C32858008F39D8 /* AddQuestionViewController.swift */,
 				782C46E42109C97600BB85F0 /* ProfileViewController.swift */,
+				782C46E8210B1A1500BB85F0 /* ProfileMoreViewController.swift */,
+				782C46EA210B1DF100BB85F0 /* MyQuestionsViewController.swift */,
+				782C46EC210B1E2900BB85F0 /* MyAnswersViewController.swift */,
+				782C46EE210B1E6A00BB85F0 /* LeaderboardViewController.swift */,
+				782C46F0210B1E7B00BB85F0 /* SettingsViewController.swift */,
 				782C46E02109B27000BB85F0 /* SWRevealViewController.h */,
 				782C46E12109B27000BB85F0 /* SWRevealViewController.m */,
 				782C46DF2109B26F00BB85F0 /* Cluck-Bridging-Header.h */,
@@ -360,10 +375,12 @@
 			files = (
 				E1E6A26D20FD0A4000D9AFAF /* Question.swift in Sources */,
 				E1E0A9CB20D456DA003E421C /* Api.swift in Sources */,
+				782C46EF210B1E6A00BB85F0 /* LeaderboardViewController.swift in Sources */,
 				E142C77720BFF32D008F39D8 /* LoginViewController.swift in Sources */,
 				E142C79A20C318FF008F39D8 /* Label+Extention.swift in Sources */,
 				E1E0A9CD20D551A9003E421C /* App.swift in Sources */,
 				782E493321086B7200402623 /* WelcomeViewController.swift in Sources */,
+				782C46E9210B1A1500BB85F0 /* ProfileMoreViewController.swift in Sources */,
 				E142C79E20C32858008F39D8 /* AddQuestionViewController.swift in Sources */,
 				E142C77B20C0294B008F39D8 /* QuestionListTableViewCell.swift in Sources */,
 				E1E6A26320FBBDC700D9AFAF /* Cluck.xcdatamodeld in Sources */,
@@ -374,12 +391,15 @@
 				784207E32108B25E00609040 /* NavigationButton.swift in Sources */,
 				E1AAE60120E54DE6004A8452 /* MyQuestionsTableViewController.swift in Sources */,
 				784207E52108B4EA00609040 /* SignUpViewController.swift in Sources */,
+				782C46ED210B1E2900BB85F0 /* MyAnswersViewController.swift in Sources */,
 				E1AAE60320E54E44004A8452 /* MyQuestionsTableViewCell.swift in Sources */,
+				782C46EB210B1DF100BB85F0 /* MyQuestionsViewController.swift in Sources */,
 				E142C79720C2F9E8008F39D8 /* SideMenuTableViewCell.swift in Sources */,
 				E142C77920C02847008F39D8 /* QuestionListTableViewController.swift in Sources */,
 				782C46E52109C97600BB85F0 /* ProfileViewController.swift in Sources */,
 				E142C79520C1D474008F39D8 /* SideMenuTableViewController.swift in Sources */,
 				E1E0A9D020D551D5003E421C /* User.swift in Sources */,
+				782C46F1210B1E7B00BB85F0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
