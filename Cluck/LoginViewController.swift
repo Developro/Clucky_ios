@@ -157,7 +157,6 @@ extension LoginViewController {
 
     @IBAction func tapConnectGoogle(_ sender: Any) {
         signIn?.signIn()
-        goToViewController(vc: "QuestionListTableViewController")
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -169,6 +168,8 @@ extension LoginViewController {
         let getCacheImage = GetCacheImage(url: ((user?.profile.imageURL(withDimension: 50))?.absoluteString)!)
         
         getCacheImage.main()
+        
+        goToViewController(vc: "QuestionListTableViewController")
         
         if let outputImage = getCacheImage.outputImage {
             loginGoogleButton.setImage(outputImage, for: .normal)
@@ -241,6 +242,7 @@ extension LoginViewController: WKNavigationDelegate {
                     DispatchQueue.main.async {
                         self.loginVKButton.setImage(outputImage, for: .normal)
                         self.loginVKButton.imageView?.layer.cornerRadius = (outputImage.size.height / 2)
+                        self.goToViewController(vc: "QuestionListTableViewController")
                     }
                     
                     //доделать через Class
@@ -249,7 +251,7 @@ extension LoginViewController: WKNavigationDelegate {
                     //                queue.addOperation(getCacheImage)
                     //                OperationQueue.main.addOperation(setImageToRow)
                 }
-                self.goToViewController(vc: "QuestionListTableViewController")
+                //self.goToViewController(vc: "QuestionListTableViewController")
                 return
             }
             

@@ -651,6 +651,7 @@
         <image name="vk" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="zKj-kE-niJ"/>
         <segue reference="rua-eb-MAL"/>
     </inferredMetricsTieBreakers>
 </document>
