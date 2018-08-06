@@ -9,6 +9,8 @@ class QuestionListTableViewController: UITableViewController {
   let questionTitles  = ["Медицина", "Продукты", "Отношения", "Право", "Образование", "Спорт"]
   let imagesArray     = [UIImage(named: "nature1.jpg")!, UIImage(named: "nature2.jpeg")!, UIImage(named: "nature3.jpeg")!, UIImage(named: "nature4.jpeg")!, UIImage(named: "nature5.jpeg")!, UIImage(named: "nature6.jpeg")!]
   
+  var user: User = User()
+  
   var questions = [Question]()
   
   override func viewDidLoad() {
@@ -57,6 +59,14 @@ class QuestionListTableViewController: UITableViewController {
     cell.questionImage.image = imagesArray[0]
     
     return cell
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "segueQuestionList" {
+      if let vc:SideMenuTableViewController = segue.destination as? SideMenuTableViewController {
+        vc.user = user
+      }
+    }
   }
   
 }

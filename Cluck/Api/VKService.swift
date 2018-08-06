@@ -24,6 +24,10 @@ class VKService {
     }
   }
   
+  enum authorizationError: Error {
+    case accessTokenHasExpired
+  }
+  
   func getUsers(token: String, completion: (([User]?, Error?) -> Void)? = nil) {
     guard let url = URL(string:"https://api.vk.com/method/users.get?fields=sex,has_photo,photo_50,city,verified&access_token=\(token)&v=5.80") else {return}
     let session = URLSession.shared
@@ -34,7 +38,17 @@ class VKService {
         return
       }
       
+      
+      
       if let data = data, let json = try? JSON(data: data) {
+        let error = json["error"]["error_msg"].stringValue
+        
+        if error == "User authorization failed: access_token has expired." {
+          completion?(nil, authorizationError.accessTokenHasExpired)
+          return
+          //переполучить токен
+        }
+        
         let users = json["response"].arrayValue.map { User(json: $0) }
         completion?(users, nil)
       }

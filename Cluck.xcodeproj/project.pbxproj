@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14DDF5AA20FCD79400C75D59 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDF5A920FCD79400C75D59 /* Bool.swift */; };
 		6C9C2E1260A8190374365E80 /* Pods_Cluck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B922777417271D0804958E32 /* Pods_Cluck.framework */; };
+		781ECDBB2110A48300E05DC6 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781ECDBA2110A48300E05DC6 /* Dictionary.swift */; };
 		787401A92109A31B00434C02 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 787401A82109A31B00434C02 /* credentials.plist */; };
 		787401AB2109AF4E00434C02 /* GetCacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787401AA2109AF4E00434C02 /* GetCacheImage.swift */; };
 		787401AD2109B07800434C02 /* SetImageToElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787401AC2109B07800434C02 /* SetImageToElement.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		14DDF5A920FCD79400C75D59 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
+		781ECDBA2110A48300E05DC6 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		787401A82109A31B00434C02 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		787401AA2109AF4E00434C02 /* GetCacheImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCacheImage.swift; sourceTree = "<group>"; };
 		787401AC2109B07800434C02 /* SetImageToElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetImageToElement.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				787401AA2109AF4E00434C02 /* GetCacheImage.swift */,
 				E142C79920C318FE008F39D8 /* Label+Extention.swift */,
 				14DDF5A920FCD79400C75D59 /* Bool.swift */,
+				781ECDBA2110A48300E05DC6 /* Dictionary.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -325,6 +328,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Cluck/Pods-Cluck-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -333,6 +339,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -352,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				787401AD2109B07800434C02 /* SetImageToElement.swift in Sources */,
+				781ECDBB2110A48300E05DC6 /* Dictionary.swift in Sources */,
 				787401AB2109AF4E00434C02 /* GetCacheImage.swift in Sources */,
 				E1E6A26D20FD0A4000D9AFAF /* Question.swift in Sources */,
 				E1E0A9CB20D456DA003E421C /* Api.swift in Sources */,
