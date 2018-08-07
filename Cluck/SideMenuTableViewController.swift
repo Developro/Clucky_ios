@@ -12,6 +12,8 @@ class SideMenuTableViewController: UITableViewController {
   
   let menuArray = ["Лента вопросов", "Мои вопросы", "Мои ответы", "Таблица лидеров", "Настройки", "Выход"]
   
+  var user: User = User()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -48,6 +50,37 @@ class SideMenuTableViewController: UITableViewController {
      }*/
     if indexPath.row == 0 {
       let cell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell", for: indexPath) as! SideMenuTableViewCell
+      cell.nameLabel.text = "\(user.last) \(user.name)"
+      
+      let logo = user.logo
+      let getCacheImage = GetCacheImage(url: logo)
+      
+      getCacheImage.main()
+      
+      if let outputImage = getCacheImage.outputImage {
+        DispatchQueue.main.async {
+          cell.photo.image = outputImage
+          cell.photo.layer.cornerRadius = 50
+        }
+      }
+      var logoTypeConnect = UIImage()
+      if let user:User = user , let typeConnect:User.TypeConnect = user.typeConnect {
+        switch typeConnect {
+        case .fb:
+          logoTypeConnect = UIImage(named: "fb")!
+          break
+        case .gplus:
+          logoTypeConnect = UIImage(named: "gplus")!
+          break
+        case .vk:
+          logoTypeConnect = UIImage(named: "vk")!
+          break
+        default:
+          break
+        }
+        cell.logoTypeConnectImageView.image = logoTypeConnect
+      }
+      
       return cell
     } else {
       let cell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell2", for: indexPath)
@@ -85,8 +118,8 @@ class SideMenuTableViewController: UITableViewController {
       self.present(controller, animated:true, completion:nil)
       break
     case 6:
-      let controller = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-      //self.navigationController?.pushViewController(controller, animated: true)
+      let controller:LoginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+      controller.nc.post(name: NSNotification.Name(rawValue: "notifacationFromDisConnect"), object: user)
       self.present(controller, animated:true, completion:nil)
       break
     default:

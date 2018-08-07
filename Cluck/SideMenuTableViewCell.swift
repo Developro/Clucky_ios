@@ -10,11 +10,13 @@ import UIKit
 
 class SideMenuTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var photo: UIImageView!
-    @IBOutlet weak var starLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var askQuestionButton: UIButton!
-    
+  @IBOutlet weak var photo: UIImageView!
+  @IBOutlet weak var starLabel: UILabel!
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var askQuestionButton: UIButton!
+  @IBOutlet weak var logoTypeConnectImageView: UIImageView!
+  
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         photo.layer.cornerRadius = 50

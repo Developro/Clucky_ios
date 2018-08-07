@@ -9,5 +9,6 @@ target 'Cluck' do
   pod 'Magic'
   pod 'GoogleSignIn'
   pod 'SwiftyJSON'
+  pod 'FBSDKLoginKit'
   
 end
