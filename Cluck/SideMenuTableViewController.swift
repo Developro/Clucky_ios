@@ -12,7 +12,7 @@ class SideMenuTableViewController: UITableViewController {
   
   let menuArray = ["Лента вопросов", "Мои вопросы", "Мои ответы", "Таблица лидеров", "Настройки", "Выход"]
   
-  var user: User = User()
+  let user: User = QuestionsManager.sharedInstance.user
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -117,6 +117,10 @@ class SideMenuTableViewController: UITableViewController {
       let controller = self.storyboard?.instantiateViewController(withIdentifier: "MyQuestionsTableViewController") as! MyQuestionsTableViewController
       self.present(controller, animated:true, completion:nil)
       break
+    case 5:
+      let controller = self.storyboard?.instantiateViewController(withIdentifier: "SettingsNC") as! SettingsNavigationController
+      self.present(controller, animated:true, completion:nil)
+      break
     case 6:
       let controller:LoginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
       controller.nc.post(name: NSNotification.Name(rawValue: "notifacationFromDisConnect"), object: user)
@@ -125,6 +129,11 @@ class SideMenuTableViewController: UITableViewController {
     default:
       break
     }
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: true)
   }
   
   

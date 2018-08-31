@@ -236,7 +236,6 @@ extension LoginViewController {
       let gplusUser = User(gplusUser: user)
       self.nc.post(name: NSNotification.Name(rawValue: "notifacationFromConnect"), object: gplusUser)
     }
-    //print(user.profile.email)
     
     let getCacheImage = GetCacheImage(url: ((user?.profile.imageURL(withDimension: 50))?.absoluteString)!)
     
@@ -271,7 +270,7 @@ extension LoginViewController {
   
   func goToQuestionViewController(user: User){
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionListTableViewController") as! QuestionListTableViewController
-    vc.user = user
+    QuestionsManager.sharedInstance.user = user
     self.present(vc, animated: true, completion: nil)
     
   }
